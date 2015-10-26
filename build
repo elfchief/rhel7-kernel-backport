@@ -1,0 +1,15 @@
+#!/bin/sh
+top=`pwd`
+workdir="$top/work"
+outdir="$top/output"
+
+rpmbuild -bb \
+    --define "_topdir $top" \
+	--define "_rpmdir $outdir" \
+	--define "_rpmfilename %%{NAME}-%%{VERSION}-%%{RELEASE}.%%{ARCH}.rpm" \
+	--define "_sourcedir $top" \
+	--define "_specdir $top" \
+	--define "_srcrpmdir $outdir" \
+	--define "_builddir $workdir/BUILD" \
+	--define "_buildrootdir $workdir/BUILDROOT" \
+	kernel-bp-3.10.spec
