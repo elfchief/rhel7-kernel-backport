@@ -13,3 +13,6 @@ To build:
 
 ...and/or copy the appropriate bits (the el7 *.rpm files and the spec file)
 into your normal rpmbuild directory tree in appropriate places.
+
+To update to latest kernel: Snag the latest kernel RPMs from CentOS 7 and
+drop them in this directory, and update the RHKrel define in the spec file.
