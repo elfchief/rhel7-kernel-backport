@@ -2,7 +2,7 @@
 
 # Define the version of the Linux Kernel Archive tarball.
 %define RHKver 3.10.0
-%define RHKrel 327.4.4
+%define RHKrel 327.13.1
 
 # Build release, and kernel release
 %define krelease %{RHKrel}.el7
@@ -65,7 +65,7 @@
 #
 # These are firmware packages that have gotten rolled into the 
 # kernel-firmware/linux-firmware packages
-%define firmware_conflicts bfa-firmware, ql2100-firmware, ql2200-firmware, ql23xx-firmware, ql2400-firmware, ql2500-firmware, rt61pci-firmware, rt73usb-firmware, xorg-x11-drv-ati-firmware
+%define firmware_conflicts bfa-firmware, ql2100-firmware, ql2200-firmware, ql23xx-firmware, ql2400-firmware, ql2500-firmware, rt61pci-firmware, rt73usb-firmware, xorg-x11-drv-ati-firmware netxen-firmware
 
 #
 # We moved the drm include files into kernel-headers, make sure there's
@@ -362,6 +362,9 @@ fi
 %endif
 
 %changelog
+* Tue Apr  5 2016 Jay Grizzard <elfchief-rpms@lupine.org>
+- Updated with 3.10.0-327.13.1 CentOS kernel
+
 * Wed Jan 13 2016 Jay Grizzard <elfchief-rpms@lupine.org>
 - Updated with 3.10.0-327.4.4 CentOS kernel
 
