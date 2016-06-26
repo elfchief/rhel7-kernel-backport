@@ -4,6 +4,9 @@ complex here, just extracting, moving a few things around, adding a few
 symlinks (to help with poorly designed software/people), and generating new
 RPMs.
 
+This "backported" kernel seems to work great for allowing the latest
+version of docker (tested up through 1.10.3) work on RHEL6.
+
 The spec file is based on the spec file provided by the "elrepo" project,
 with adjustments, and stripped down to remove parts we don't need (like
 NOPAE kernels).
