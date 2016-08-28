@@ -1,11 +1,12 @@
-This is a backport of the RHEL7 kernel to RHEL6. Well, sort-of a backport.
-It's the RHEL7 kernel extracted and repackaged for RHEL6. There's nothing
-complex here, just extracting, moving a few things around, adding a few
-symlinks (to help with poorly designed software/people), and generating new
-RPMs.
+This is a backport of the CentOS 7 kernel to CentOS 6. Well, sort-of a
+backport. It's the RHEL7 kernel extracted and repackaged for RHEL6. There's
+nothing complex here, just extracting, moving a few things around, adding
+a few symlinks (to help with poorly designed software/people), and generating
+new RPMs. You still get the advantages of a supported & tested kernel, since
+the kernel binaries are used verbatim from the CentOS 7 binary RPMs.
 
 This "backported" kernel seems to work great for allowing the latest
-version of docker (tested up through 1.10.3) work on RHEL6.
+version of docker (tested up through 1.10.3) work on CentOS 6.
 
 The spec file is based on the spec file provided by the "elrepo" project,
 with adjustments, and stripped down to remove parts we don't need (like
