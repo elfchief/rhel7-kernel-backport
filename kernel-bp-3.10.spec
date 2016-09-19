@@ -2,7 +2,7 @@
 
 # Define the version of the Linux Kernel Archive tarball.
 %define RHKver 3.10.0
-%define RHKrel 327.28.3
+%define RHKrel 327.36.1
 
 # Build release, and kernel release
 %define krelease %{RHKrel}.el7
@@ -362,20 +362,23 @@ fi
 %endif
 
 %changelog
-* Sun Aug 28 2016 Jay Grizzard <elfchief-rpms@lupine.org>
+* Mon Sep 19 2016 J. Grizzard <elfchief-rpms@lupine.org>
+- Updated with 3.10.0-327.36.1 CentOS kernel
+
+* Sun Aug 28 2016 J. Grizzard <elfchief-rpms@lupine.org>
 - Updated with 3.10.0-327.28.3 CentOS kernel
 
-* Mon Jul 11 2016 Jay Grizzard <elfchief-rpms@lupine.org>
+* Mon Jul 11 2016 J. Grizzard <elfchief-rpms@lupine.org>
 - Updated with 3.10.0-327.22.2 CentOS kernel
 
-* Tue May 20 2016 Jay Grizzard <elfchief-rpms@lupine.org>
+* Tue May 20 2016 J. Grizzard <elfchief-rpms@lupine.org>
 - Updated with 3.10.0-327.18.2 CentOS kernel
 
-* Tue Apr  5 2016 Jay Grizzard <elfchief-rpms@lupine.org>
+* Tue Apr  5 2016 J. Grizzard <elfchief-rpms@lupine.org>
 - Updated with 3.10.0-327.13.1 CentOS kernel
 
-* Wed Jan 13 2016 Jay Grizzard <elfchief-rpms@lupine.org>
+* Wed Jan 13 2016 J. Grizzard <elfchief-rpms@lupine.org>
 - Updated with 3.10.0-327.4.4 CentOS kernel
 
-* Mon Oct 26 2015 Jay Grizzard <elfchief-rpms@lupine.org>
+* Mon Oct 26 2015 J. Grizzard <elfchief-rpms@lupine.org>
 - Initial build with 3.10.0-229.14.1 CentOS kernel
