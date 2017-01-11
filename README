@@ -1,3 +1,5 @@
+NOTE: As of 2017-01-10, you need git-lfs support to check out this repo
+
 This is a backport of the CentOS 7 kernel to CentOS 6. Well, sort-of a
 backport. It's the RHEL7 kernel extracted and repackaged for RHEL6. There's
 nothing complex here, just extracting, moving a few things around, adding
