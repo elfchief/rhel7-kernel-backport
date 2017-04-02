@@ -1,5 +1,15 @@
 NOTE: As of 2017-01-10, you need git-lfs support to check out this repo
 
+NEWER NOTE: As of 2017-04-01, I'm not storing any files in LFS -- was running
+out of space and didn't want to have to pay for space to take care of the
+whole one person that probably cares about this repo. So instead, the 
+build script downloads the CentOS 7 binary RPMs first, verifies them, and
+then builds the package. The build script will also add the CentOS 7 signing
+key to your rpm keyring, to allow for package verification.
+
+
+The rest of the README:
+
 This is a backport of the CentOS 7 kernel to CentOS 6. Well, sort-of a
 backport. It's the RHEL7 kernel extracted and repackaged for RHEL6. There's
 nothing complex here, just extracting, moving a few things around, adding
@@ -20,5 +30,5 @@ To build:
 ...and/or copy the appropriate bits (the el7 *.rpm files and the spec file)
 into your normal rpmbuild directory tree in appropriate places.
 
-To update to latest kernel: Snag the latest kernel RPMs from CentOS 7 and
-drop them in this directory, and update the RHKrel define in the spec file.
+To update to latest kernel: Adjust build script with appropriate URLs and
+filenames, update the RHKrel define in the spec file, and build.

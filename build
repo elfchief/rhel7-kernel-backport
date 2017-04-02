@@ -1,13 +1,75 @@
 #!/bin/sh
+# Change these when there's a new kernel or firmware version
+kver=3.10.0-514.10.2
+fver=20160830-49.git7534e19
+
+# Sadly, you may have to change these URLs when new versions of the OS are
+# released, since there won't be an 'updates' directory at first.I wish 
+# there was a way to do this that didn't require that.
+KBASEURL=http://mirror.centos.org/centos-7/7/updates/x86_64/Packages
+FBASEURL=http://mirror.centos.org/centos-7/7/os/x86_64/Packages
+
+
+# You shouldn't have to change anything below here
+set -e -E
 top=`pwd`
 workdir="$top/work"
 outdir="$top/output"
+
+KSOURCES="
+kernel-$kver.el7.x86_64.rpm
+kernel-abi-whitelists-$kver.el7.noarch.rpm
+kernel-debug-$kver.el7.x86_64.rpm
+kernel-debug-devel-$kver.el7.x86_64.rpm
+kernel-devel-$kver.el7.x86_64.rpm
+kernel-doc-$kver.el7.noarch.rpm
+kernel-headers-$kver.el7.x86_64.rpm
+"
+
+FSOURCES="
+linux-firmware-$fver.el7.noarch.rpm
+"
+
+download() {
+    if [ -f "sources/$1" ]; then
+        echo "  Not downloading: $1"
+    else 
+        echo "  Downloading: $1"
+        if ! curl -s -f $2 -o sources/$1; then
+            echo "ERROR: Failed to download $1 (curl returned $?)"
+            exit 1
+        fi
+    fi
+
+    echo -n "    " 
+    if ! (cd sources; rpm -K $1); then
+        echo "ERROR: Failed to verify $1 (rpm -K returned $?)"
+        exit 1
+    fi
+}
+
+mkdir -p sources
+rpm --import RPM-GPG-KEY-CentOS-7
+
+echo "Downloading sources:"
+for i in $KSOURCES
+do
+    download "$i" "$KBASEURL/$i"
+done
+
+for i in $FSOURCES
+do
+    download "$i" "$FBASEURL/$i"
+done
+
+echo
+echo "Source files all ok, building:"
 
 rpmbuild -bb \
     --define "_topdir $top" \
 	--define "_rpmdir $outdir" \
 	--define "_rpmfilename %%{NAME}-%%{VERSION}-%%{RELEASE}.%%{ARCH}.rpm" \
-	--define "_sourcedir $top" \
+	--define "_sourcedir $top/sources" \
 	--define "_specdir $top" \
 	--define "_srcrpmdir $outdir" \
 	--define "_builddir $workdir/BUILD" \
