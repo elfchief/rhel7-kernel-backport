@@ -362,35 +362,38 @@ fi
 %endif
 
 %changelog
-* Sun Apr 16 2017 J. Grizzard <elfchief-rpms@lupine.org>
+* Sun May 28 2017 J. Grizzard <jg-github@lupine.org>
 - Updated with 3.10.0-514.16.1 CentOS kernel
 
-* Fri Mar  3 2017 J. Grizzard <elfchief-rpms@lupine.org>
+* Sun Apr 16 2017 J. Grizzard <jg-github@lupine.org>
+- Updated with 3.10.0-514.16.1 CentOS kernel
+
+* Fri Mar  3 2017 J. Grizzard <jg-github@lupine.org>
 - Updated with 3.10.0-514.10.2 CentOS kernel
 
-* Thu Feb 23 2017 J. Grizzard <elfchief-rpms@lupine.org>
+* Thu Feb 23 2017 J. Grizzard <jg-github@lupine.org>
 - Updated with 3.10.0.514.6.2 CentOS kernel
 
-* Thu Jan 19 2017 J. Grizzard <elfchief-rpms@lupine.org>
+* Thu Jan 19 2017 J. Grizzard <jg-github@lupine.org>
 - Updated with 3.10.0.514.6.1 CentOS kernel
 
-* Mon Sep 19 2016 J. Grizzard <elfchief-rpms@lupine.org>
+* Mon Sep 19 2016 J. Grizzard <jg-github@lupine.org>
 - Updated with 3.10.0-327.36.1 CentOS kernel
 
-* Sun Aug 28 2016 J. Grizzard <elfchief-rpms@lupine.org>
+* Sun Aug 28 2016 J. Grizzard <jg-github@lupine.org>
 - Updated with 3.10.0-327.28.3 CentOS kernel
 
-* Mon Jul 11 2016 J. Grizzard <elfchief-rpms@lupine.org>
+* Mon Jul 11 2016 J. Grizzard <jg-github@lupine.org>
 - Updated with 3.10.0-327.22.2 CentOS kernel
 
-* Tue May 20 2016 J. Grizzard <elfchief-rpms@lupine.org>
+* Tue May 20 2016 J. Grizzard <jg-github@lupine.org>
 - Updated with 3.10.0-327.18.2 CentOS kernel
 
-* Tue Apr  5 2016 J. Grizzard <elfchief-rpms@lupine.org>
+* Tue Apr  5 2016 J. Grizzard <jg-github@lupine.org>
 - Updated with 3.10.0-327.13.1 CentOS kernel
 
-* Wed Jan 13 2016 J. Grizzard <elfchief-rpms@lupine.org>
+* Wed Jan 13 2016 J. Grizzard <jg-github@lupine.org>
 - Updated with 3.10.0-327.4.4 CentOS kernel
 
-* Mon Oct 26 2015 J. Grizzard <elfchief-rpms@lupine.org>
+* Mon Oct 26 2015 J. Grizzard <jg-github@lupine.org>
 - Initial build with 3.10.0-229.14.1 CentOS kernel
