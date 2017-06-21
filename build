@@ -1,6 +1,6 @@
 #!/bin/sh
 # Change these when there's a new kernel or firmware version
-kver=3.10.0-514.21.1
+kver=3.10.0-514.21.2
 fver=20160830-49.git7534e19
 
 # Sadly, you may have to change these URLs when new versions of the OS are

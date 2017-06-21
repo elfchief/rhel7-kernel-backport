@@ -2,7 +2,7 @@
 
 # Define the version of the Linux Kernel Archive tarball.
 %define RHKver 3.10.0
-%define RHKrel 514.16.1
+%define RHKrel 514.21.2
 
 # Build release, and kernel release
 %define krelease %{RHKrel}.el7
@@ -362,6 +362,9 @@ fi
 %endif
 
 %changelog
+* Tue Jun 20 2017 J. Grizzard <jg-github@lupine.org>
+- Updates with 3.10.0-514.21.2 CentOS kernel
+
 * Sun May 28 2017 J. Grizzard <jg-github@lupine.org>
 - Updated with 3.10.0-514.16.1 CentOS kernel
 
