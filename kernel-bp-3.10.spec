@@ -2,7 +2,7 @@
 
 # Define the version of the Linux Kernel Archive tarball.
 %define RHKver 3.10.0
-%define RHKrel 514.21.2
+%define RHKrel 514.26.2
 
 # Build release, and kernel release
 %define krelease %{RHKrel}.el7
