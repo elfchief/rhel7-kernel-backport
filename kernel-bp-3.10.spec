@@ -2,7 +2,7 @@
 
 # Define the version of the Linux Kernel Archive tarball.
 %define RHKver 3.10.0
-%define RHKrel 514.26.2
+%define RHKrel 693.2.2
 
 # Build release, and kernel release
 %define krelease %{RHKrel}.el7
@@ -123,7 +123,7 @@ Source0: kernel-%{RHKver}-%{RHKrel}.el7.x86_64.rpm
 Source2: kernel-devel-%{RHKver}-%{RHKrel}.el7.x86_64.rpm
 Source3: kernel-doc-%{RHKver}-%{RHKrel}.el7.noarch.rpm
 Source4: kernel-headers-%{RHKver}-%{RHKrel}.el7.x86_64.rpm
-Source5: linux-firmware-20160830-49.git7534e19.el7.noarch.rpm
+Source5: linux-firmware-20170606-56.gitc990aae.el7.noarch.rpm
 
 # Do not package the source RPMs.
 NoSource: 0
@@ -198,6 +198,7 @@ This package provides the firmware files required for some devices to operate.
 
 # Disable the building of the debug package(s).
 %define debug_package %{nil}
+%define _binaries_in_noarch_packages_terminate_build   0
 
 %prep
 
@@ -226,7 +227,7 @@ rpm2cpio %{SOURCE5} | cpio -idm
 
 # Put firmware in the right place for EL6
 %{__mv} usr/lib/firmware lib/firmware
-%{__mv} usr/share/doc/linux-firmware-20160830 usr/share/doc/kernel-firmware-%{version}
+%{__mv} usr/share/doc/linux-firmware-20170606 usr/share/doc/kernel-firmware-%{version}
 
 # And make the docs dir match our package name
 %{__mv} usr/share/doc/kernel-doc-%{version} usr/share/doc/%{name}-doc-%{version}
@@ -389,7 +390,7 @@ fi
 * Mon Jul 11 2016 J. Grizzard <jg-github@lupine.org>
 - Updated with 3.10.0-327.22.2 CentOS kernel
 
-* Tue May 20 2016 J. Grizzard <jg-github@lupine.org>
+* Tue May 24 2016 J. Grizzard <jg-github@lupine.org>
 - Updated with 3.10.0-327.18.2 CentOS kernel
 
 * Tue Apr  5 2016 J. Grizzard <jg-github@lupine.org>
