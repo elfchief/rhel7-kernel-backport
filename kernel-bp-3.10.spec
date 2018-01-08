@@ -2,7 +2,7 @@
 
 # Define the version of the Linux Kernel Archive tarball.
 %define RHKver 3.10.0
-%define RHKrel 693.2.2
+%define RHKrel 693.11.6
 
 # Build release, and kernel release
 %define krelease %{RHKrel}.el7
@@ -123,7 +123,7 @@ Source0: kernel-%{RHKver}-%{RHKrel}.el7.x86_64.rpm
 Source2: kernel-devel-%{RHKver}-%{RHKrel}.el7.x86_64.rpm
 Source3: kernel-doc-%{RHKver}-%{RHKrel}.el7.noarch.rpm
 Source4: kernel-headers-%{RHKver}-%{RHKrel}.el7.x86_64.rpm
-Source5: linux-firmware-20170606-56.gitc990aae.el7.noarch.rpm
+Source5: linux-firmware-20170606-57.gitc990aae.el7.noarch.rpm
 
 # Do not package the source RPMs.
 NoSource: 0

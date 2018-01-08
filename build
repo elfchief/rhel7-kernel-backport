@@ -1,13 +1,13 @@
 #!/bin/sh
 # Change these when there's a new kernel or firmware version
-kver=3.10.0-693.2.2
-fver=20170606-56.gitc990aae
+kver=3.10.0-693.11.6
+fver=20170606-57.gitc990aae
 
 # Sadly, you may have to change these URLs when new versions of the OS are
 # released, since there won't be an 'updates' directory at first.I wish 
 # there was a way to do this that didn't require that.
 KBASEURL=http://mirror.centos.org/centos-7/7/updates/x86_64/Packages
-FBASEURL=http://mirror.centos.org/centos-7/7/os/x86_64/Packages
+FBASEURL=http://mirror.centos.org/centos-7/7/updates/x86_64/Packages
 
 
 # You shouldn't have to change anything below here
